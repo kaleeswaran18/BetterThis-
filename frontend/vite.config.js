@@ -1,8 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/BetterThis-/', // <-- set this to your repo name
+  base: "./",       // relative paths to index.html
+  build: {
+    outDir: 'docs', // directly build into docs folder
+    assetsDir: 'assets'
+  }
 })
